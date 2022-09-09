@@ -43,17 +43,18 @@ class makeTheme:
 
     def loadPos(self):
         # load pos and lemma data
+        print(self.themeConfig["parse"])
         if self.themeConfig["parse"] not in os.listdir("themeFiles"):
-            print("parse Theme and put in themeFiles dir first!")
+            raise Exception("parse Theme and put in themeFiles dir first!")
             exit()
         themeJson = json.load(open("themeFiles/" + self.themeConfig["parse"]))
 
         posD = defaultdict(list)
         self.nerD = defaultdict(list)
 
-        print("Reading json")
+        # print("Reading json")
         last = defaultdict(list)
-        print(len(themeJson["sentences"]))
+        # print(len(themeJson["sentences"]))
         j = 0
         self.lemmaD = defaultdict(list)
         for s in themeJson["sentences"]:
@@ -77,7 +78,7 @@ class makeTheme:
                     posD[t["pos"]].append(wrd)
                     self.lemmaD[wrd].append(t["lemma"])
 
-        print("Done reading json")
+        # print("Done reading json")
 
         self.bestPosD = {}
         for pos in posD:

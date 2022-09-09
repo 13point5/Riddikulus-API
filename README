@@ -1,36 +1,16 @@
-Be sure to visit project page at http://lang.ee.washington.edu/rewriter/ for important external resources
+# Gojo - An API to Thematify Math Questions
 
-To run, install python dependencies, download vectors and Ngrams model and place in /externalData 
-Optionally download prebuilt theme file (swFilm.txt) and place in /themeFiles
-run: python3 generator.py swConfig.txt
+To increase engagement and interest towards math word problems, this API converts a boring problem
+into a theme of your choice like Iron Man, Harry Potter, etc.
 
-To evaluate: 
-download Meteor evaluation metric ( http://www.cs.cmu.edu/~alavie/METEOR/ )
-run: java -Xmx2G -jar meteor-*.jar out/<outputfile> data/<dataset>/gold.txt -r 3
+This is an API to serve the work of the paper [A Theme-Rewriting Approach for Generating Algebra Word Problems](https://arxiv.org/abs/1610.06210) which also has an accompanying [repo](https://gitlab.cs.washington.edu/kedzior/Rewriter).
 
-Modify swConfig.txt to change configuration options.
-Of note are the theme/questions parameter, which points to the data folder containing original math problems and their Stanford parses
+### Here's an example:
 
+**Original Question**
 
-### Python Dependencies:
-Numpy
-Scikit-learn
-Kenlm
-Nltk with Wordnet and wordnet_ic corpora 
+Alice has 2 apples and Bob has 3 apples. How many apples do they have?
 
+**Iron Man version of the question**
 
-
-###Things you will need to download externally of this repository (available at http://lang.ee.washington.edu/rewriter/ ):
-
-Levy and Goldberg Vectors (placed in externalData/)
-Google English Fiction Syntactic N-gram language Model (also in externalData/)
-(optional) star wars "theme" file (to be put in themeFiles/)
-
-
-
-
-###To build other themes:
-
-For movie themes, Scriptbase ( contact Philip John Gorinski and see http://www.aclweb.org/anthology/N15-1113 )
-For Genre themes (like "Western"), download ebooks from ( https://www.gutenberg.org/ )
-For Adventure time scripts, use Scripbase + scripts from ( http://www.springfieldspringfield.co.uk/episode_scripts.php?tv-show=adventure-time )
+Stark has 2 olives and Jarvis has 3 olives . How many olives do they have ?
