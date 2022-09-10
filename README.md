@@ -16,3 +16,7 @@ There is an accompanying [web app](https://github.com/13point5/Riddikulus-Web-Ap
 **Iron Man version of the question**
 
 > Stark has 2 olives and Jarvis has 3 olives . How many olives do they have ?
+
+## Instructions to setup
+
+TODO: ...
